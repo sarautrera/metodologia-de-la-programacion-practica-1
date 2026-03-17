@@ -3,9 +3,10 @@ package es.uah.matcomp.mp.e1.ejerciciosclases.practica2;
 public class MyCircle {
     private MyPoint center;
     private int radius;
+
     public MyCircle(){
-        this.center=new MyPoint(0,0);
-        this.radius=0;
+        this.center = new MyPoint(0,0);
+        this.radius = 1;
     }
     public MyCircle(int x, int y, int radius){
         this.center= new MyPoint(x,y);
@@ -30,32 +31,35 @@ public class MyCircle {
     public int getCenterX(){
         return center.getX();
     }
-    public void setCenterX(int x){
-        center.setX(x);
-    }
     public int getCenterY(){
         return center.getY();
     }
+    public void setCenterX(int x){
+        //No igualamos porque no estamos reeplazando sino modificando
+        this.center.setX(x);
+    }
     public void setCenterY(int y){
-        center.setY(y);
+        this.center.setY(y);
     }
     public int[] getCenterXY(){
         return center.getXY();
     }
     public void setCenterXY(int x, int y){
-        center.setXY(x,y);
-    }
-    public String toString(){
-        return "MyCircle[radius= "+radius+", center= "+center.toString()+"]";
+        this.center.setXY(x,y);
     }
     public double getArea(){
         return Math.PI*radius*radius;
     }
     public double getCircumference(){
-        return 2*Math.PI*radius;
+        return Math.PI*2*radius;
     }
     public double distance(MyCircle another){
-        return this.center.distance(another.getCenter());
+        return center.distance(another.getCenter());
     }
-}
+    public String tostring(){
+        return "MyCircle[radius="+radius+", center="+center+"]";
+    }
 
+
+
+}

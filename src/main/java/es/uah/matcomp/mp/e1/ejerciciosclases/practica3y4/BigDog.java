@@ -1,18 +1,16 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica3y4;
 
-public class BigDog extends Dog {
+public class BigDog extends Dog{
     public BigDog(String name){
         super(name);
     }
-    @Override
     public void greets(){
-        System.out.println("Wooow");
+        System.out.println("Woow");
     }
-    @Override
     public void greets(Dog another){
-        System.out.println("Woooooow");
+        System.out.println("Wooooow");
     }
     public void greets(BigDog another){
-        System.out.println("Wooooooooow");
+        System.out.println("Woooooooow");
     }
 }

@@ -1,33 +1,25 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica2;
 
 public class Customer {
-    public int id;
-    public String name;
-    public int discount;
+    private int id;
+    private String name;
+    private char gender;
 
-    public Customer(int id, String name, int discount) {
-        this.id = id;
-        this.name = name;
-        this.discount = discount;
+    public Customer(int id, String name, char gender){
+        this.id=id;
+        this.name=name;
+        this.gender=gender;
     }
-
-    public int getId() {
-        return this.id;
+    public int getId(){
+        return id;
     }
-
-    public String getName() {
-        return this.name;
+    public String getName(){
+        return name;
     }
-
-    public int getDiscount() {
-        return this.discount;
+    public char  getGender(){
+        return gender;
     }
-
-    public void setDiscount(int discount) {
-        this.discount = discount;
-    }
-
-    public String toString() {
-        return this.name + "(" + this.id + ")(" + this.discount + "%)";
+    public String toString(){
+        return name+"("+id+")";
     }
 }

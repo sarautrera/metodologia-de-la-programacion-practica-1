@@ -1,37 +1,51 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica1;
 
 public class Circle {
+    // Atributos
     private double radius;
+    private String color;
 
+    //CONSTRUCTORES SOBRECARGADOS:
+    /**Constructor por defecto de un circulo*/
     public Circle() {
-        this.radius = (double)1.0F;
+        this.radius = 1.0;
+        this.color = "red";
+    }
+    /**Constructor de un circulo*/
+    public Circle(double r) {
+        this.radius = r;
+        this.color = "red";
     }
 
-    public Circle(double radius) {
-        this.radius = radius;
-    }
-
-    public Circle(double radius, String color) {
-        this.radius = radius;
-    }
-
+    // Métodos (Getters y Setters)
+    /**Obtiene el radio*/
     public double getRadius() {
-        return this.radius;
+        return radius;
     }
-
+    /**Obtiene el color*/
+    public String getColor() {
+        return color;
+    }
+    /**CEstablece el radio*/
     public void setRadius(double radius) {
         this.radius = radius;
     }
-
+    /**Establece el color*/
+    public void setColor(String color) {
+        this.color = color;
+    }
+    //Metodos publicos
+    /**Obtiene el area*/
     public double getArea() {
-        return this.radius * this.radius * Math.PI;
+        return radius * radius * Math.PI;
     }
-
+    /**Obtiene la circunferencia*/
     public double getCircumference() {
-        return (Math.PI * 2D) * this.radius;
+        return 2 * Math.PI * radius;
     }
 
+    /**totring*/
     public String toString() {
-        return "Circle[radius=" + this.radius + "]";
+        return "Circle[radius=" + radius + ", color=" + color + "]";
     }
 }
