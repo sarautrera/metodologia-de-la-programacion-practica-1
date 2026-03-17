@@ -1,47 +1,47 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica1;
 
 public class InvoiceItem {
+    //Atributos
     private String id;
     private String desc;
     private int qty;
     private double unitPrice;
-
-    public InvoiceItem(String id, String desc, int qty, double unitPrice) {
-        this.id = id;
-        this.desc = desc;
-        this.qty = qty;
-        this.unitPrice = unitPrice;
+    /**Constructor con argumentos*/
+    public InvoiceItem(String id, String desc, int qty, double unitPrice){
+        this.id=id;
+        this.desc=desc;
+        this.qty=qty;
+        this.unitPrice=unitPrice;
     }
-
-    public String getId() {
-        return this.id;
+    /**Getter para obtener el id*/
+    public String getId(){
+        return id;
     }
-
-    public String getDesc() {
-        return this.desc;
+    /**Getter para obtener el desc*/
+    public String getDesc(){
+        return desc;
     }
-
-    public int getQty() {
-        return this.qty;
+    /**Getter para obtener el qty*/
+    public int getQty(){
+        return qty;
     }
-
-    public void setQty(int qty) {
-        this.qty = qty;
+    /**Getter para establecer qty*/
+    public void setQty(int qty){
+        this.qty=qty;
     }
-
-    public double getUnitPrice() {
-        return this.unitPrice;
+    /**Getter para obtener el UnitPrice*/
+    public double getUnitPrice(){
+        return unitPrice;
     }
-
-    public void setUnitPrice(double unitPrice) {
-        this.unitPrice = unitPrice;
+    /**Getter para establecer UnitPrice*/
+    public void setUnitPrice(double unitPrice){
+        this.unitPrice=unitPrice;
     }
-
-    public double getTotal() {
-        return this.unitPrice * (double)this.qty;
+    /**Metodo para hallar el total*/
+    public double getTotal(){
+        return unitPrice*qty;
     }
-
-    public String toString() {
-        return "InvoiceItem[id= " + this.id + ", desc= " + this.desc + ", qty= " + this.qty + ", unitPrice= " + this.unitPrice + "]";
+    public String toString(){
+        return "InvoiceItem[id="+id+", desc="+desc+", qty="+qty+", unitPrice="+unitPrice+"]";
     }
 }

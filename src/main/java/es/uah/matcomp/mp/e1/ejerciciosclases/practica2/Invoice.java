@@ -5,50 +5,37 @@ public class Invoice {
     private Customer customer;
     private double amount;
 
-    public Invoice(int id, Customer customer, double amount) {
-        this.id = id;
+    public Invoice(int id, Customer customer, double amount){
+        this.id=id;
         this.customer = customer;
-        this.amount = amount;
+        this.amount=amount;
     }
-
-    public int getId() {
-        return this.id;
+    public int getId(){
+        return id;
     }
-
-    public Customer getCustomer() {
-        return this.customer;
+    public Customer getCustomer(){
+        return customer;
     }
-
-    public void setCustomer() {
-        this.customer = this.customer;
+    public double getAmount(){
+        return amount;
     }
-
-    public double getAmount() {
-        return this.amount;
+    public void setAmount(double amount){
+        this.amount=amount;
     }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public int getCustomerId(){
+        return customer.getId();
     }
-
-    public int getCustomerId() {
-        return this.customer.getId();
+    public String getCustomerName(){
+        return customer.getName();
     }
-
-    public String getCustomerName() {
-        return this.customer.getName();
+    public int getCustomerDiscount(){
+        return customer.getDiscount();
     }
-
-    public int getCustomerDiscount() {
-        return this.customer.getDiscount();
+    public double getAmountAfterDiscount(){
+        this.amount=amount*(1-customer.getDiscount()/100.0);
+        return amount;
     }
-
-    public double getAmountAfterDiscount() {
-        return this.amount - this.amount * ((double)this.customer.getDiscount() / (double)100.0F);
-    }
-
-    public String toString() {
-        int var10000 = this.id;
-        return "Invoice[id=" + var10000 + this.customer.toString() + ", amount=" + this.amount + "]";
+    public String toString(){
+        return "Invoice[id="+id+", costumer="+ customer.toString()+", amount="+amount+"]";
     }
 }

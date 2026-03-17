@@ -8,8 +8,4 @@ public class Cat extends Animal{
     public void greets(){
         System.out.println("Meow");
     }
-    @Override
-    public String toString(){
-        return "Cat["+super.toString()+"]";
-    }
 }
