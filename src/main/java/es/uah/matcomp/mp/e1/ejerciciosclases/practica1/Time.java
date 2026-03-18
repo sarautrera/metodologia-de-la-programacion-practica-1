@@ -1,50 +1,51 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica1;
-
+// Clase para manejar la hora (horas, minutos y segundos) y poder moverla
 public class Time {
-    //Atributos
+
+    // ATRIBUTOS
     private int hour;
     private int minute;
     private int second;
-    /**Constructor con argumentos*/
+
+    // CONSTRUCTORES
     public Time(int hour, int minute, int second){
         this.hour=hour;
         this.minute=minute;
         this.second=second;
     }
-    /**Getter para obtener las horas*/
+
+    // GETS
     public int getHour(){
         return hour;
     }
-    /**Getter para obtener los minutos*/
     public int getMinute(){
         return minute;
     }
-    /**Getter para obtener los segundos*/
     public int getSecond(){
         return second;
     }
-    /**Setter para establecer la hora*/
+
+    // SETS
     public void setHour(int hour){
         this.hour=hour;
     }
-    /**Setter para establecer los minutos*/
     public void setMinute(int minute){
         this.minute=minute;
     }
-    /**Setter para establecer los segundos*/
     public void setSecond(int second){
         this.second=second;
     }
-    /**Metodo para establecer el tiempo*/
+
+    // FUNCIONES ESPECÍFICAS
+
+    // Cambia la hora completa de una sola vez
     public void setTime(int hour, int minute, int second){
         this.hour=hour;
         this.minute=minute;
         this.second=second;
     }
-    public String toString(){
-        return String.format("%02d:%02d:%02d",hour, minute, second);
-    }
-    /**Metodo para aumentar en un segundo*/
+
+    // Suma un segundo y va ajustando minutos y horas si llegan al tope (60 o 24)
     public Time nextSecond(){
         this.second=second+1;
         if (second==60){
@@ -59,7 +60,9 @@ public class Time {
             }
         }
         return this;
-    }/**Metodo para restar en un segundo*/
+    }
+
+    // Resta un segundo y vuelve atrás las horas y minutos si bajan de cero
     public Time previousSecond(){
         this.second=second-1;
         if (second==-1){
@@ -72,10 +75,12 @@ public class Time {
                     this.hour=23;
                 }
             }
-
-            }
-
+        }
         return this;
+    }
 
+    // TOSTRING
+    public String toString(){
+        return String.format("%02d:%02d:%02d",hour, minute, second);
     }
 }

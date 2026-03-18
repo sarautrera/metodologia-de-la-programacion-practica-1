@@ -1,46 +1,51 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica1;
-
+// Clase básica para guardar y cambiar fechas (día, mes y año)
 public class Date {
-    //Atributos
+
+    // ATRIBUTOS
     private int day;
     private int month;
     private int year;
-    /**Constructor con argumentos*/
+
+    // CONSTRUCTORES
     public Date(int day, int month, int year){
         this.day=day;
         this.month=month;
         this.year=year;
     }
-    /**Getter para obtener day*/
+
+    // GETS
     public int getDay(){
         return day;
     }
-    /**Getter para obtener month*/
     public int getMonth(){
         return month;
     }
-    /**Getter para obtener year*/
     public int getYear(){
         return year;
     }
-    /**Setter para establecer day*/
+
+    // SETS
     public void setDay(int day){
         this.day=day;
     }
-    /**Setter para establecer month*/
     public void setMonth(int month){
         this.month=month;
     }
-    /**Setter para establecer year*/
     public void setYear(int year){
         this.year=year;
     }
-    /**Metodo para determinar año*/
+
+    // FUNCIONES ESPECÍFICAS
+
+    // Para actualizar los tres valores de la fecha de golpe
     public void setDate(int day, int month, int year){
         this.day=day;
         this.month=month;
         this.year=year;
     }
+
+    // TOSTRING
     public String toString() {
         // %02d -> entero, 2 dígitos, rellena con cero
         // %04d -> entero, 4 dígitos (para el año)

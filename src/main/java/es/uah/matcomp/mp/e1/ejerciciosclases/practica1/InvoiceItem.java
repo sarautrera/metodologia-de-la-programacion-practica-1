@@ -1,46 +1,51 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica1;
-
+// Clase para gestionar cada línea de una factura (producto, cantidad y precio)
 public class InvoiceItem {
-    //Atributos
+
+    // ATRIBUTOS
     private String id;
     private String desc;
     private int qty;
     private double unitPrice;
-    /**Constructor con argumentos*/
+
+    // CONSTRUCTORES
     public InvoiceItem(String id, String desc, int qty, double unitPrice){
         this.id=id;
         this.desc=desc;
         this.qty=qty;
         this.unitPrice=unitPrice;
     }
-    /**Getter para obtener el id*/
+
+    // GETS
     public String getId(){
         return id;
     }
-    /**Getter para obtener el desc*/
     public String getDesc(){
         return desc;
     }
-    /**Getter para obtener el qty*/
     public int getQty(){
         return qty;
     }
-    /**Getter para establecer qty*/
-    public void setQty(int qty){
-        this.qty=qty;
-    }
-    /**Getter para obtener el UnitPrice*/
     public double getUnitPrice(){
         return unitPrice;
     }
-    /**Getter para establecer UnitPrice*/
+
+    // SETS
+    public void setQty(int qty){
+        this.qty=qty;
+    }
     public void setUnitPrice(double unitPrice){
         this.unitPrice=unitPrice;
     }
-    /**Metodo para hallar el total*/
+
+    // FUNCIONES ESPECÍFICAS
+
+    // Calcula el precio total de esta línea multiplicando cantidad por precio unitario
     public double getTotal(){
         return unitPrice*qty;
     }
+
+    // TOSTRING
     public String toString(){
         return "InvoiceItem[id="+id+", desc="+desc+", qty="+qty+", unitPrice="+unitPrice+"]";
     }

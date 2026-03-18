@@ -1,41 +1,46 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica1;
-
+// Clase para gestionar una cuenta del banco (ingresos, gastos y envíos de dinero)
 public class Account {
-    //Atributos
+
+    // ATRIBUTOS
     private String id;
     private String name;
     private int balance;
 
-    //Constructores, getters y setters
-    /**Constructor con argumentos*/
+    // CONSTRUCTORES
     public Account(String id, String name) {
         this.id = id;
         this.name = name;
     }
-    /**Constructor con argumentos*/
+
     public Account(String id, String name, int balance) {
         this.id = id;
         this.name = name;
         this.balance = balance;
     }
-    /**Getter para obtener el id*/
+
+    // GETS
     public String getID() {
         return id;
     }
-    /**Getter para obtener el nombre*/
+
     public String getName() {
         return name;
     }
-    /**Getter para obtener Balance*/
+
     public int getBalance() {
         return balance;
     }
-    /**Metodo para hallar credit*/
+
+    // FUNCIONES ESPECÍFICAS
+
+    // Para meter dinero en la cuenta y que se sume al total
     public int credit(int amount) {
         this.balance = balance + amount;
         return balance;
     }
-    /**Metodo para hallar debit*/
+
+    // Para sacar dinero. Si pides más de lo que tienes, te avisa y no te deja
     public int debit(int amount) {
         if (amount <= balance) {
             this.balance = balance - amount;
@@ -45,16 +50,19 @@ public class Account {
         }
         return balance;
     }
-    /**Metodo para hallar transfer*/
+
+    // Pasa dinero de esta cuenta a otra si hay saldo suficiente
     public int transferTo(Account another, int amount) {
         if (amount <= balance) {
-            this.balance -= amount;//le quitamos dinero a la cuenta para transferirlo
-            another.credit(amount);
+            this.balance -= amount; // lo quito de aquí
+            another.credit(amount); // lo mando allá
         } else {
             System.out.println("Amount exceeded balance");
         }
         return balance;
     }
+
+    // TOSTRING
     public String toString(){
         return "Account[id="+id+", name="+name+", balance="+balance+"]";
     }
