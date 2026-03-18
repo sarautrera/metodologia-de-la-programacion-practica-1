@@ -1,47 +1,58 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica1;
 
+// esta clase sirve para gestionar cada uno de los articulos de una factura
 public class InvoiceItem {
-    //Atributos
+    // definimos los atributos privados para que los datos del producto esten seguros
     private String id;
-    private String desc;
-    private int qty;
-    private double unitPrice;
-    /**Constructor con argumentos*/
-    public InvoiceItem(String id, String desc, int qty, double unitPrice){
-        this.id=id;
-        this.desc=desc;
-        this.qty=qty;
-        this.unitPrice=unitPrice;
+    private String desc; // descripcion del articulo o servicio
+    private int qty; // cantidad de unidades compradas
+    private double unitPrice; // precio de cada unidad (dinero por unidad)
+
+    // constructor para crear el objeto con toda la informacion del tiquet
+    public InvoiceItem(String id, String desc, int qty, double unitPrice) {
+        this.id = id;
+        this.desc = desc;
+        this.qty = qty;
+        this.unitPrice = unitPrice;
     }
-    /**Getter para obtener el id*/
-    public String getId(){
-        return id;
+
+    // metodos de acceso para consultar el identificador y la descripcion
+    public String getId() {
+        return this.id;
     }
-    /**Getter para obtener el desc*/
-    public String getDesc(){
-        return desc;
+
+    public String getDesc() {
+        return this.desc;
     }
-    /**Getter para obtener el qty*/
-    public int getQty(){
-        return qty;
+
+    // permite saber cuantas unidades se han anotado en la factura
+    public int getQty() {
+        return this.qty;
     }
-    /**Getter para establecer qty*/
-    public void setQty(int qty){
-        this.qty=qty;
+
+    // por si nos hemos equivocado y tenemos que cambiar la cantidad
+    public void setQty(int qty) {
+        this.qty = qty;
     }
-    /**Getter para obtener el UnitPrice*/
-    public double getUnitPrice(){
-        return unitPrice;
+
+    // devuelve el dinero que cuesta una sola unidad del producto
+    public double getUnitPrice() {
+        return this.unitPrice;
     }
-    /**Getter para establecer UnitPrice*/
-    public void setUnitPrice(double unitPrice){
-        this.unitPrice=unitPrice;
+
+    // permite actualizar el precio unitario si cambia el coste
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
     }
-    /**Metodo para hallar el total*/
-    public double getTotal(){
-        return unitPrice*qty;
+
+    // este metodo es clave: calcula el dinero total de esta linea multiplicando precio por cantidad
+    public double getTotal() {
+        // hacemos un cast a double para asegurar que el calculo de dinero sea preciso
+        return this.unitPrice * (double)this.qty;
     }
-    public String toString(){
-        return "InvoiceItem[id="+id+", desc="+desc+", qty="+qty+", unitPrice="+unitPrice+"]";
+
+    // saca un resumen del articulo con todos sus datos bien formateados
+    public String toString() {
+        return "InvoiceItem[id= " + this.id + ", desc= " + this.desc + ", qty= " + this.qty + ", unitPrice= " + this.unitPrice + "]";
     }
 }

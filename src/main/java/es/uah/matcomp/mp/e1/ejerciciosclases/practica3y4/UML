@@ -1,0 +1,21 @@
+@startuml
+abstract class Animal{
+{abstract}+greeting(): void
+}
+class Cat{
+    +greeting():void
+}
+class Dog{
+    +greeting():void
+    +greeting(another: Dog):void
+}
+class BigDog{
+    +greeting():void
+    +greeting(another:Dog):void
+}
+'Relaciones de herencia
+Animal <|-- Cat
+Animal <|-- Dog
+Dog <|-- BigDog
+
+@enduml

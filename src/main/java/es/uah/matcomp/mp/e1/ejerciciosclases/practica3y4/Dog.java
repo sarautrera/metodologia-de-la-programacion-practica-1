@@ -8,10 +8,12 @@ public class Dog extends Animal{
     public void greets(){
         System.out.println("Woof");
     }
+
     public void greets(Dog another){
-        System.out.println("Wooooof");
+        System.out.println("Woooof");
     }
-    public void greets(BigDog another){
-        System.out.println("Woooooooow");
+    @Override
+    public String toString(){
+        return "Dog["+super.toString()+"]";
     }
 }

@@ -1,51 +1,46 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica1;
 
+// clase circle para representar un circulo y calcular sus propiedades
 public class Circle {
-    // Atributos
+    // atributo privado para el radio siguiendo el principio de encapsulamiento
     private double radius;
-    private String color;
 
-    //CONSTRUCTORES SOBRECARGADOS:
-    /**Constructor por defecto de un circulo*/
+    // constructor por defecto: si no pasamos nada, el radio es 1.0
     public Circle() {
-        this.radius = 1.0;
-        this.color = "red";
-    }
-    /**Constructor de un circulo*/
-    public Circle(double r) {
-        this.radius = r;
-        this.color = "red";
+        this.radius = (double)1.0F;
     }
 
-    // Métodos (Getters y Setters)
-    /**Obtiene el radio*/
+    // constructor para crear un circulo con el radio que queramos
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // este constructor recibe tambien el color, aunque en esta clase no lo guardamos
+    public Circle(double radius, String color) {
+        this.radius = radius;
+    }
+
+    // metodos getter y setter para manejar el valor del radio desde fuera
     public double getRadius() {
-        return radius;
+        return this.radius;
     }
-    /**Obtiene el color*/
-    public String getColor() {
-        return color;
-    }
-    /**CEstablece el radio*/
+
     public void setRadius(double radius) {
         this.radius = radius;
     }
-    /**Establece el color*/
-    public void setColor(String color) {
-        this.color = color;
-    }
-    //Metodos publicos
-    /**Obtiene el area*/
+
+    // calcula el area del circulo: pi por el radio al cuadrado
     public double getArea() {
-        return radius * radius * Math.PI;
-    }
-    /**Obtiene la circunferencia*/
-    public double getCircumference() {
-        return 2 * Math.PI * radius;
+        return this.radius * this.radius * Math.PI;
     }
 
-    /**totring*/
+    // calcula el perimetro o longitud de la circunferencia (2 * pi * r)
+    public double getCircumference() {
+        return (Math.PI * 2D) * this.radius;
+    }
+
+    // devuelve una cadena con la informacion del radio del circulo
     public String toString() {
-        return "Circle[radius=" + radius + ", color=" + color + "]";
+        return "Circle[radius=" + this.radius + "]";
     }
 }

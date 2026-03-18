@@ -8,15 +8,16 @@ public class Person {
         this.address=address;
     }
     public String getName(){
-        return this.name;
+        return name;
     }
     public String getAddress(){
-        return this.address;
+        return address;
     }
     public void setAddress(String address){
         this.address=address;
     }
+    @Override
     public String toString(){
-        return "Person[name="+name+", address="+address+"]";
+        return "Person["+name+","+address+"]";
     }
 }
