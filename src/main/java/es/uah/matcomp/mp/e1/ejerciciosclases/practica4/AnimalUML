@@ -1,0 +1,15 @@
+@StartUML
+ANIMAL (abstract)
++greeting(): void (abstract)
+
+CAT (extends ANIMAL)
++greeting(): void
+
+DOG (extends ANIMAL)
++greeting(): void
++greeting(another:DOG): void
+
+BIGDOG (extends DOG)
++greeting(): void
++greeting(another:DOG): void
++greeting(another:BIGDOG): void
