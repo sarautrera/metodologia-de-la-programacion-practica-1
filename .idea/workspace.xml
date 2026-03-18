@@ -4,33 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6afd2c4-4a70-49e4-9077-54281efc8c62" name="Changes" comment="practica 2">
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Date.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/InvoiceItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/InvoiceItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/Time.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Invoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyCircle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/AccountTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/BallTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/BallTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/CircleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/DateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/DateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/EmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/EmployeeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/InvoiceItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/InvoiceItemTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/RectangleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/TimeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica1/TimeTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="d6afd2c4-4a70-49e4-9077-54281efc8c62" name="Changes" comment="practica 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +45,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "Merging sara",
+    "git-widget-placeholder": "sara",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/UAH/IdeaProjects/metodologia-de-la-programacion-practica-1/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases",
@@ -133,7 +107,7 @@
       <workItem from="1773845113068" duration="98000" />
       <workItem from="1773848360741" duration="1050000" />
       <workItem from="1773850709082" duration="31000" />
-      <workItem from="1773869976899" duration="603000" />
+      <workItem from="1773869976899" duration="922000" />
     </task>
     <task id="LOCAL-00001" summary="refractor directorio scr esther">
       <option name="closed" value="true" />
