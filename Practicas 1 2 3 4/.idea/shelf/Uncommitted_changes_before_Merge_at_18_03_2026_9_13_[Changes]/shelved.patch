@@ -1,0 +1,152 @@
+Index: src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica3y4/Mammal.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package main.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica3y4;\r\n\r\npublic class Mammal extends Animal{\r\n    public Mammal(String name){\r\n        super(name);\r\n    }\r\n    @Override\r\n    public String toString(){\r\n        return \"Mammal[\"+super.toString()+\"]\";\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica3y4/Mammal.java b/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica3y4/Mammal.java
+--- a/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica3y4/Mammal.java	(revision b99dee40c347a92ef8b21c3328f070586695a4b8)
++++ b/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica3y4/Mammal.java	(date 1773821371271)
+@@ -8,4 +8,5 @@
+     public String toString(){
+         return "Mammal["+super.toString()+"]";
+     }
++    public void greets(){}
+ }
+Index: src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica3y4/MovableCircle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package main.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica3y4;\r\n\r\npublic class MovableCircle implements Movable{\r\n    private int radius;\r\n    private MovablePoint center;\r\n     public  MovableCircle(int x, int y, int xSpeed, int ySpeed, int radius){\r\n         this.center = new MovablePoint(1,1,2,2);\r\n         this. radius =radius;\r\n     }\r\n    @Override\r\n    public void moveUp(){\r\n        center.y += center.ySpeed;\r\n    }\r\n    @Override\r\n    public void moveDown(){\r\n        center.y -= center.ySpeed;\r\n    }\r\n\r\n    @Override\r\n    public void moveLeft() {\r\n        center.x -= center.xSpeed;\r\n    }\r\n    @Override\r\n    public void moveRight(){\r\n        center.x += center.xSpeed;\r\n    }\r\n    public String toString(){\r\n        return \"(\"+center.x+\",\"+center.y+\"), speed=(\"+center.x+\",\"+center.y+\"), radius=\"+radius;\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica3y4/MovableCircle.java b/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica3y4/MovableCircle.java
+--- a/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica3y4/MovableCircle.java	(revision b99dee40c347a92ef8b21c3328f070586695a4b8)
++++ b/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica3y4/MovableCircle.java	(date 1773820463793)
+@@ -9,22 +9,22 @@
+      }
+     @Override
+     public void moveUp(){
+-        center.y += center.ySpeed;
++        center.moveUp();
+     }
+     @Override
+     public void moveDown(){
+-        center.y -= center.ySpeed;
++        center.moveDown();
+     }
+ 
+     @Override
+     public void moveLeft() {
+-        center.x -= center.xSpeed;
++        center.moveLeft();
+     }
+     @Override
+     public void moveRight(){
+-        center.x += center.xSpeed;
++        center.moveRight();
+     }
+     public String toString(){
+-        return "("+center.x+","+center.y+"), speed=("+center.x+","+center.y+"), radius="+radius;
++        return "("+center.getX()+","+center.getY()+"), speed=("+center.getXSpeed()+","+center.getYSpeed()+"), radius="+radius;
+     }
+ }
+Index: src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyPoint.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package main.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica2;\r\n\r\npublic class MyPoint {\r\n    private int x;\r\n    private int y;\r\n\r\n    public MyPoint() {\r\n    }\r\n    public MyPoint(int x, int y){\r\n        this.x=x;\r\n        this.y=y;\r\n    }\r\n    public int getX(){\r\n        return x;\r\n    }\r\n    public int getY(){\r\n        return y;\r\n    }\r\n    public void setX(int x){\r\n        this.x=x;\r\n    }\r\n    public void setY(int y){\r\n        this.y=y;\r\n    }\r\n    public int[] getXY(){\r\n        return new int[] {x,y};\r\n    }\r\n    public void setXY(int x, int y){\r\n        this.x=x;\r\n        this.y=y;\r\n    }\r\n    public double distance(int x, int y){\r\n        //La distancia entre el punto guardado en memoria y el dado\r\n        int xDiff=this.x-x;\r\n        int yDiff=this.y-y;\r\n        return Math.sqrt(xDiff*xDiff+yDiff*yDiff);\r\n    }\r\n    public double distance(MyPoint another){\r\n        //Another es una variable que representa otro objeto de la clase MyPoint\r\n        int xOtro = another.getX();\r\n        int yOtro = another.getY();\r\n\r\n        int xDiff = this.x - xOtro;\r\n        int yDiff = this.y - yOtro;\r\n\r\n        return Math.sqrt(xDiff*xDiff+yDiff*yDiff);\r\n        //Se podria poner en una sola linea como return distance(another.getX(), another.getY());\r\n\r\n    }\r\n    public double distance() {\r\n        // Distancia al punto (0,0)\r\n        return Math.sqrt(this.x * this.x + this.y * this.y);\r\n    }\r\n    public String toString(){\r\n        return \"(\"+x+\",\"+y+\")\";\r\n    }\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyPoint.java b/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyPoint.java
+--- a/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyPoint.java	(revision b99dee40c347a92ef8b21c3328f070586695a4b8)
++++ b/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/MyPoint.java	(date 1773817104321)
+@@ -7,8 +7,8 @@
+     public MyPoint() {
+     }
+     public MyPoint(int x, int y){
+-        this.x=x;
+-        this.y=y;
++        this.x=0;
++        this.y=0;
+     }
+     public int getX(){
+         return x;
+Index: src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Invoice.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package main.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica2;\r\n\r\npublic class Invoice {\r\n    private int id;\r\n    private Customer customer;\r\n    private double amount;\r\n\r\n    public Invoice(int id, Customer customer, double amount){\r\n        this.id=id;\r\n        this.customer = customer;\r\n        this.amount=amount;\r\n    }\r\n    public int getId(){\r\n        return id;\r\n    }\r\n    public Customer getCustomer(){\r\n        return customer;\r\n    }\r\n    public double getAmount(){\r\n        return amount;\r\n    }\r\n    public void setAmount(double amount){\r\n        this.amount=amount;\r\n    }\r\n    public int getCustomerId(){\r\n        return customer.getId();\r\n    }\r\n    public String getCustomerName(){\r\n        return customer.getName();\r\n    }\r\n    public int getCustomerDiscount(){\r\n        return customer.getDiscount();\r\n    }\r\n    public double getAmountAfterDiscount(){\r\n        this.amount=amount*(1-customer.getDiscount()/100.0);\r\n        return amount;\r\n    }\r\n    public String toString(){\r\n        return \"Invoice[id=\"+id+\", costumer=\"+ customer.toString()+\", amount=\"+amount+\"]\";\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Invoice.java b/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Invoice.java
+--- a/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Invoice.java	(revision b99dee40c347a92ef8b21c3328f070586695a4b8)
++++ b/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Invoice.java	(date 1773816623166)
+@@ -1,5 +1,5 @@
+ package main.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica2;
+-
++import main.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica2.Customer;
+ public class Invoice {
+     private int id;
+     private Customer customer;
+@@ -28,8 +28,8 @@
+     public String getCustomerName(){
+         return customer.getName();
+     }
+-    public int getCustomerDiscount(){
+-        return customer.getDiscount();
++    public double getCustomerDiscount(){
++        return amount*(1-customer.getDiscount()/100);
+     }
+     public double getAmountAfterDiscount(){
+         this.amount=amount*(1-customer.getDiscount()/100.0);
+Index: src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/TestCircle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package test.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica2;\r\nimport main.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica2.MyCircle;\r\npublic class TestCircle {\r\n    public static void main(String[] args){\r\n        MyCircle c1= new MyCircle();\r\n        c1.setCenterXY(1,2);\r\n        System.out.println(\"x:\"+c1.getCenterX());\r\n        System.out.println(\"y:\"+c1.getCenterY());\r\n        System.out.println(\"Radio por defecto:\"+c1.getRadius());\r\n        c1.setRadius(3);\r\n        c1.setCenterX(2);\r\n        c1.setCenterY(2);\r\n        System.out.println(\"x:\"+c1.getCenterX());\r\n        System.out.println(\"y:\"+c1.getCenterY());\r\n        System.out.println(\"x:\"+c1.getCenterXY()[0]);\r\n        System.out.println(\"y:\"+c1.getCenterXY()[1]);\r\n        System.out.println(\"Radio:\"+c1.getRadius());\r\n        MyPoint p1= new MyPoint(1,2);\r\n        MyCircle c2 =new MyCircle(p1, 2);\r\n        System.out.println(\"Center:\"+c2.getCenter());\r\n        MyPoint p2=new MyPoint(1,1);\r\n        c2.setCenter(p2);\r\n        System.out.println(\"Center 2:\"+c2.getCenter());\r\n        System.out.println(\"Radio:\"+c2.getRadius());\r\n        MyCircle c3=new MyCircle(1,1,6);\r\n        System.out.println(\"x:\"+c3.getCenterX());\r\n        System.out.println(\"y:\"+c3.getCenterY());\r\n        System.out.println(\"Radio:\"+c3.getRadius());\r\n        System.out.println(c3.getArea());\r\n        System.out.println(c3.getCircumference());\r\n        System.out.println(c2.distance(c3));\r\n\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/TestCircle.java b/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/TestCircle.java
+--- a/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/TestCircle.java	(revision b99dee40c347a92ef8b21c3328f070586695a4b8)
++++ b/src/test/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/TestCircle.java	(date 1773814546413)
+@@ -1,5 +1,6 @@
+ package test.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica2;
+ import main.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica2.MyCircle;
++import main.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica2.MyPoint;
+ public class TestCircle {
+     public static void main(String[] args){
+         MyCircle c1= new MyCircle();
+Index: src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Account.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package main.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica2;\r\n\r\npublic class Account {\r\n    private int id;\r\n    private Customer customer;\r\n    private double balance;\r\n\r\n    public Account(int id, Customer customer){\r\n        this.id=id;\r\n        this.customer=customer;\r\n    }\r\n    public Account(int id, Customer customer, double balance) {\r\n        this.id = id;\r\n        this.customer = customer;\r\n        this.balance = balance;\r\n    }\r\n    public int getId(){\r\n        return id;\r\n    }\r\n    public Customer getCustomer(){\r\n        return customer;\r\n    }\r\n    public double getBalance(){\r\n        return balance;\r\n    }\r\n    public void setBalance(double balance){\r\n        this.balance=balance;\r\n    }\r\n    public String getCustomerName(){\r\n        return customer.getName();\r\n    }\r\n    public Account deposit(double amount){\r\n        this.balance+=amount;\r\n        return this;\r\n    }\r\n    public Account withdraw(double amount){\r\n        if (balance >= amount){\r\n            this.balance-=amount;\r\n        }\r\n        else{\r\n            System.out.println(\"Amount withdraw exceeds the current balance!\");\r\n        }\r\n        return this;\r\n    }\r\n    public String toString(){\r\n        return customer.getName()+\"(\"+id+\") \"+\"balance=\"+balance;\r\n    }\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Account.java b/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Account.java
+--- a/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Account.java	(revision b99dee40c347a92ef8b21c3328f070586695a4b8)
++++ b/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Account.java	(date 1773816747001)
+@@ -12,7 +12,7 @@
+     public Account(int id, Customer customer, double balance) {
+         this.id = id;
+         this.customer = customer;
+-        this.balance = balance;
++        this.balance = 0.0;
+     }
+     public int getId(){
+         return id;
+Index: src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Customer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package main.java.es.uah.matcomp.mp.e1.ejerciciosclases.practica2;\r\n\r\npublic class Customer {\r\n    private int id;\r\n    private String name;\r\n    private char gender;\r\n\r\n    public Customer(int id, String name, char gender){\r\n        this.id=id;\r\n        this.name=name;\r\n        this.gender=gender;\r\n    }\r\n    public int getId(){\r\n        return id;\r\n    }\r\n    public String getName(){\r\n        return name;\r\n    }\r\n    public char  getGender(){\r\n        return gender;\r\n    }\r\n    public String toString(){\r\n        return name+\"(\"+id+\")\";\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Customer.java b/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Customer.java
+--- a/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Customer.java	(revision b99dee40c347a92ef8b21c3328f070586695a4b8)
++++ b/src/main/java/es/uah/matcomp/mp/e1/ejerciciosclases/practica2/Customer.java	(date 1773816623148)
+@@ -4,12 +4,16 @@
+     private int id;
+     private String name;
+     private char gender;
++    private int discount;
+ 
+     public Customer(int id, String name, char gender){
+         this.id=id;
+         this.name=name;
+         this.gender=gender;
+     }
++    public int getDiscount(){
++        return discount;
++    }
+     public int getId(){
+         return id;
+     }
