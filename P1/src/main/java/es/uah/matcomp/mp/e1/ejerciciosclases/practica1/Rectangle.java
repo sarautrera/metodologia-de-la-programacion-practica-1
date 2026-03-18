@@ -1,4 +1,4 @@
-package Practica1.main;
+package es.uah.matcomp.mp.e1.ejerciciosclases.practica1;
 
 public class Rectangle {
     //Atributos
