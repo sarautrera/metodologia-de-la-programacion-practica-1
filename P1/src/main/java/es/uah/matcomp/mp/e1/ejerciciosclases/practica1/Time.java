@@ -1,14 +1,17 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica1;
 
 public class Time {
+    //Atributos
     private int hour;
     private int minute;
     private int second;
+    //Constructores
     public Time(int hour, int minute, int second){
         this.hour=hour;
         this.minute=minute;
         this.second=second;
     }
+    //getters y setters
     public int getHour(){
         return hour;
     }

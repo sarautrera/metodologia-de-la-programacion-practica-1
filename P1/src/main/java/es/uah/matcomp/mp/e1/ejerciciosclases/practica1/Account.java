@@ -6,7 +6,7 @@ public class Account {
     private String name;
     private int balance;
 
-    //Constructores, getters y setters
+    //Constructores
     public Account(String id, String name) {
         this.id = id;
         this.name = name;
@@ -17,6 +17,7 @@ public class Account {
         this.name = name;
         this.balance = balance;
     }
+    //getters y setters
 
     public String getID() {
         return id;

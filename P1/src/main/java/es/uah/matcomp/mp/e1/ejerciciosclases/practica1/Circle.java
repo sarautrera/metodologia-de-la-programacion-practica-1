@@ -11,6 +11,7 @@ public class Circle {
         this.color = "red";
     }
 
+    //getters y setters
     public Circle(double r) {
         this.radius = r;
         this.color = "red";

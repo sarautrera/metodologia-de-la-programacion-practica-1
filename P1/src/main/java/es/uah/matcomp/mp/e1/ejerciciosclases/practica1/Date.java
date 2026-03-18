@@ -1,14 +1,17 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica1;
 
 public class Date {
+    //Atributos
     private int day;
     private int month;
     private int year;
+    //Constructores
     public Date(int day, int month, int year){
         this.day=day;
         this.month=month;
         this.year=year;
     }
+    //getters y setters
     public int getDay(){
         return day;
     }

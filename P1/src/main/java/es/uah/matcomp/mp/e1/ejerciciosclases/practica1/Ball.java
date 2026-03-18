@@ -1,12 +1,14 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.practica1;
 
 public class Ball {
+    //Atributos
     private float x;
     private float y;
     private int radius;
     private float xDelta;
     private float yDelta;
 
+    //Constructores
     public Ball(float x, float y, int radius, float xDelta, float yDelta){
         this.x=x;
         this.y=y;
@@ -14,6 +16,7 @@ public class Ball {
         this.xDelta=xDelta;
         this.yDelta=yDelta;
     }
+    //getters y setters
     public float getX(){
         return x;
     }
