@@ -1,0 +1,2 @@
+Al guardar un array simple, cada elemento se serializa individualmente y una lista se convierte en una sucesion de elementos en un unico contenedor JSON.
+Si el array esta dentro de un objeto, el array se convierte en un atributo de este. se abre un nuevo nivel de subordinacion, que ayuda a estructurar los datos.

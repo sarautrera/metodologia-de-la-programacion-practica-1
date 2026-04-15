@@ -1,0 +1,3 @@
+Para representar objetos dentro de otros objetos en JSON, debemos serializar los atributos de ambas clases. Si lo hacemos de forma manual, el método toJson() de la clase Libro debe llamar al método toJson() de la clase Autor.
+Es fundamental evitar las referencias circulares (cuando el objeto hijo tiene una referencia de vuelta al padre), ya que esto causaría un bucle infinito de llamadas (StackOverflow).
+Como ejemplo, he elegido la clase libro que a su vez llama a la clase autor en el ejercicio 1.
